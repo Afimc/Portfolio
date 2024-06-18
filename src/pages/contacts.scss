@@ -1,0 +1,31 @@
+.contacts {
+  transition: transform 0.5s ease;
+  &:hover {
+    transform: scale(1.15);
+    box-shadow: var(--box-shadow);
+  }
+  ul {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 1.5rem;
+  }
+
+  li {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    transition: transform 0.9s ease;
+  }
+  li:hover {
+    transform: scale(1.15);
+  }
+
+  a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: var(--text-color);
+    }
+  }
+}

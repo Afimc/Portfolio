@@ -1,6 +1,11 @@
+import './projects.scss';
 
 function Projects() {
-    return <div>Projects</div>;
+  return ( 
+    <div className="projects">
+      Projects
+    </div>
+  );
   }
   
   export default Projects;

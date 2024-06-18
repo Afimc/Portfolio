@@ -1,0 +1,109 @@
+.skills {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    gap: 10rem;
+    background: var(--background-gradient);
+  
+    .skill-box {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 300px;
+      height: 300px;
+      border-radius: 40%;
+      color: white;
+      font-family: 'Roboto', sans-serif;
+      font-size: 1.8rem;
+      text-align: center;
+      transition: transform 0.3s ease;
+      cursor: pointer;
+  
+      &:hover {
+        transform: scale(1.1);
+        box-shadow: 8px 8px 16px rgba(14, 13, 13, 0.5);
+  
+        .hidden-skills {
+          opacity: 1;
+          transform: scale(1);
+        }
+  
+        /* Specific background colors for each hidden skill */
+        &.front-end-skills .hidden-skills {
+          &:nth-of-type(1) { background-color: #61dafb; } /* Light blue */
+          &:nth-of-type(2) { background-color: #40424d; } /* Dark gray */
+          &:nth-of-type(3) { background-color: #ffa500; } /* Orange */
+          &:nth-of-type(4) { background-color: #4caf50; } /* Green */
+          &:nth-of-type(5) { background-color: #f44336; } /* Red */
+          &:nth-of-type(6) { background-color: #9c27b0; } /* Purple */
+          &:nth-of-type(7) { background-color: #ffc107; } /* Yellow */
+          &:nth-of-type(8) { background-color: #009688; } /* Teal */
+        }
+  
+        &.back-end-skills .hidden-skills {
+          &:nth-of-type(1) { background-color: #ff5722; } /* Deep Orange */
+          &:nth-of-type(2) { background-color: #795548; } /* Brown */
+          &:nth-of-type(3) { background-color: #607d8b; } /* Blue Gray */
+          &:nth-of-type(4) { background-color: #8bc34a; } /* Light Green */
+        }
+  
+        &.hosting-skills .hidden-skills {
+          &:nth-of-type(1) { background-color: #673ab7; } /* Deep Purple */
+          &:nth-of-type(2) { background-color: #e91e63; } /* Pink */
+        }
+      }
+  
+      .hidden-skills {
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        background-color: rgba(0, 0, 0, 0.8);
+        border-radius: 50%;
+        color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 0.9rem;
+        text-align: center;
+        transition: all 0.3s ease;
+        opacity: 0;
+        transform: scale(0);
+      }
+    
+  
+      /* Positioning hidden skills for front-end-skills */
+      &.front-end-skills .hidden-skills:nth-of-type(1) { transform: translate(-150px, -150px); }
+      &.front-end-skills .hidden-skills:nth-of-type(2) { transform: translate(0, -200px); }
+      &.front-end-skills .hidden-skills:nth-of-type(3) { transform: translate(150px, -150px); }
+      &.front-end-skills .hidden-skills:nth-of-type(4) { transform: translate(200px, 0); }
+      &.front-end-skills .hidden-skills:nth-of-type(5) { transform: translate(150px, 150px); }
+      &.front-end-skills .hidden-skills:nth-of-type(6) { transform: translate(0, 200px); }
+      &.front-end-skills .hidden-skills:nth-of-type(7) { transform: translate(-150px, 150px); }
+      &.front-end-skills .hidden-skills:nth-of-type(8) { transform: translate(-200px, 0); }
+  
+      /* Positioning hidden skills for back-end-skills */
+      &.back-end-skills .hidden-skills:nth-of-type(1) { transform: translate(-150px, -150px); }
+      &.back-end-skills .hidden-skills:nth-of-type(2) { transform: translate(0, -200px); }
+      &.back-end-skills .hidden-skills:nth-of-type(3) { transform: translate(150px, -150px); }
+      &.back-end-skills .hidden-skills:nth-of-type(4) { transform: translate(200px, 0); }
+  
+      /* Positioning hidden skills for hosting-skills */
+      &.hosting-skills .hidden-skills:nth-of-type(1) { transform: translate(-150px, -150px); }
+      &.hosting-skills .hidden-skills:nth-of-type(2) { transform: translate(150px, -150px); }
+    }
+  
+    .front-end-skills {
+      background-color: #61dafb;
+    }
+  
+    .back-end-skills {
+      background-color: #40424d;
+    }
+  
+    .hosting-skills {
+      background-color: #ffa500;
+    }
+  }
+  
