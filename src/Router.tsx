@@ -6,13 +6,14 @@ import Projects from "./pages/projects";
 import Skills from "./pages/skills";
 import Contacts from "./pages/contacts";
 
+
 function Router() {
   return (
     <div className="router">
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Layout />}>
-            <Route index element={<About />} />
+            <Route index element={ <About /> } />
             <Route path="projects" element={<Projects />} />
             <Route path="skills" element={<Skills />} />
             <Route path="contacts" element={<Contacts />} />
