@@ -1,20 +1,28 @@
-import React, { useState } from 'react';
+import  { useState } from 'react';
 import './project.scss'
 
-function Project({title, desc, extendetProps}:any) {
+function Project({ props, isExtended, setExtendedIndex }: any) {
     const [extendet, setExtendet] = useState(false)
+    
   return ( 
     <>
     {
-     !extendet
-        ? <div className="project-box" onClick={()=>setExtendet(true)}>
-            <h1>{title}</h1>
-            <p>{desc}</p>
+     !isExtended
+        ? <div className="project-box" onClick={setExtendedIndex}>
+            <h1>{props.title}</h1>
+            <p>{props.info}</p>
         </div>
-        :<div className="project-box" onClick={()=>setExtendet(false)}>
-        <h1>{title}</h1>
-        <p>{desc}</p>
-        <p>{extendetProps.content}</p>
+        :<div className="project-box"  onClick={setExtendedIndex} >
+        <h1>{props.title}</h1>
+        <p>{props.extendetDisc}</p>
+        <div className="imgs">
+          {
+            props.img.map((img:string,i:number)=>{
+              return <img src={img} key={i}></img>
+            })
+          }
+        </div>
+        
     </div>
     }
    </>
