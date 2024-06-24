@@ -1,8 +1,8 @@
-import  { useState } from 'react';
+
 import './project.scss'
 
 function Project({ props, isExtended, setExtendedIndex }: any) {
-    const [extendet, setExtendet] = useState(false)
+    
     
   return ( 
     <>

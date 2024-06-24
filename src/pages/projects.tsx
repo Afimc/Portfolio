@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import  { useState } from "react";
 import "./projects.scss";
 import Project from "./shared/project";
 import {projectContent} from "./shared/content";
