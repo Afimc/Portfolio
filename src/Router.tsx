@@ -10,10 +10,10 @@ import Contacts from "./pages/contacts";
 function Router() {
   return (
     <div className="router">
-      <BrowserRouter>
+      <BrowserRouter  basename="/portfolio">
         <Routes>
           <Route path="/" element={<Layout />}>
-            <Route index element={ <About /> } />
+            <Route path="/" element={<About />} />
             <Route path="projects" element={<Projects />} />
             <Route path="skills" element={<Skills />} />
             <Route path="contacts" element={<Contacts />} />
